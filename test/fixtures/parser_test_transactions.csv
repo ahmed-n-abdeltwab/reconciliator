@@ -1,0 +1,2 @@
+providerTransactionId,email,userId,provider,amount,currency,status
+tx1,test@test.com,testUserId,testProvider,50,USD,disputed
