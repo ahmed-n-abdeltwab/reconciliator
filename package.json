@@ -1,0 +1,29 @@
+{
+  "name": "reconciliator",
+  "version": "0.1.0",
+  "description": "CSV reconciler service (source vs internal) producing JSON reports",
+  "main": "src/cli.js",
+  "scripts": {
+    "build": "echo \"no build step\"",
+    "start": "node ./src/cli.js",
+    "test": "jest",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "jest": "^29.6.0",
+    "eslint": "^8.50.0",
+    "prettier": "^2.8.8",
+    "eslint-config-prettier": "^8.8.0"
+  }
+}
