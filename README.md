@@ -42,7 +42,7 @@ node ./src/index.js --source source_transactions.csv --system system_transaction
 
 JSON printed to stdout (pretty, 2-space indent):
 
-```json
+```yaml
 {
   "missing_in_internal": [
     { "id": "<id>", "amount": <num>, "currency": "<cur>", "status": "<status>" }
@@ -64,7 +64,7 @@ JSON printed to stdout (pretty, 2-space indent):
 
 ## Sample output
 
-```json
+```bash
 {
   "missing_in_internal": [
     {
