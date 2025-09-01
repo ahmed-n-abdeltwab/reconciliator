@@ -23,7 +23,7 @@ tx2,100,USD,completed
     expect(report.missing_in_source).toEqual([
       {
         id: 'tx2',
-        amount: '100',
+        amount: 100,
         currency: 'USD',
         status: 'completed',
       },
@@ -51,7 +51,7 @@ tx1,678.34,USD,Paid
     expect(report.missing_in_internal).toEqual([
       {
         id: 'tx2',
-        amount: '100',
+        amount: 100,
         currency: 'USD',
         status: 'completed',
       },
@@ -80,8 +80,8 @@ tx1,678.34,USD,Paid
         transactionId: 'tx1',
         discrepancies: {
           amount: {
-            source: '100',
-            system: '678.34',
+            source: 100,
+            system: 678.34,
           },
           status: {
             source: 'completed',

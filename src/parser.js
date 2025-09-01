@@ -30,7 +30,7 @@ async function parseCSV(filePath) {
       .pipe(csv())
       .on('data', (raw) => {
         const rawId = raw['providerTransactionId'] || raw['transactionId'];
-        const rawAmount = raw['amount'];
+        const rawAmount = raw['amount'] = parseFloat(raw['amount']);
         const rawCurrency = raw['currency'];
         const rawStatus = raw['status'];
 

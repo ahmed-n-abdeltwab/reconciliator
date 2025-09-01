@@ -17,7 +17,7 @@ describe('parseCSV', () => {
       email: 'test@test.com',
       userId: 'testUserId',
       provider: 'testProvider',
-      amount: '50',
+      amount: 50,
       currency: 'USD',
       status: 'disputed',
     });
@@ -35,7 +35,7 @@ tx2,678.34,USD,Paid
     expect(tx2).toBeDefined();
     expect(tx2._raw).toEqual({
       providerTransactionId: 'tx2',
-      amount: '678.34',
+      amount: 678.34,
       currency: 'USD',
       status: 'Paid',
     });
@@ -53,7 +53,7 @@ tx3,100,USD,completed
     expect(tx3).toBeDefined();
     expect(tx3._raw).toEqual({
       transactionId: 'tx3',
-      amount: '100',
+      amount: 100,
       currency: 'USD',
       status: 'completed',
     });
