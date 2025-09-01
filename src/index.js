@@ -8,7 +8,7 @@ async function main() {
     .requiredOption('-i, --system <path>', 'Path to system CSV file');
 
   program.parse(process.argv);
-  
+
   const options = program.opts();
 
   const { source, system } = options;
@@ -41,7 +41,7 @@ async function main() {
     return;
   }
 
-  // reconcile - parser normalizes rows to { id, amount, currency, status } so use those keys
+  // reconcile - parser normalizes rows to { id, amount, currency, status }
   const report = reconcile(sourceRows, systemRows);
 
   const output = {
