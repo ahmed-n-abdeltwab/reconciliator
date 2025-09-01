@@ -1,15 +1,25 @@
+const { program } = require('commander');
 const { parseCSV } = require('./parser');
 const { reconcile } = require('./reconciler');
 
 async function main() {
-  const [, , sourcePath, systemPath] = process.argv;
+  program
+    .requiredOption('-s, --source <path>', 'Path to source CSV file')
+    .requiredOption('-i, --system <path>', 'Path to system CSV file');
+
+  program.parse(process.argv);
+  
+  const options = program.opts();
+
+  const { source, system } = options;
+
 
   let sourceResult;
   let systemResult;
   try {
     [sourceResult, systemResult] = await Promise.all([
-      parseCSV(sourcePath),
-      parseCSV(systemPath),
+      parseCSV(source),
+      parseCSV(system),
     ]);
   } catch (err) {
     // parse or IO error

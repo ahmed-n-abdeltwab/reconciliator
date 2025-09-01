@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "build": "echo \"no build step\"",
-    "start": "node ./src/index.js source_transactions.csv system_transactions.csv",
+    "start": "node ./src/index.js --source source_transactions.csv --system system_transactions.csv",
     "test": "jest",
     "lint": "eslint .",
     "format": "prettier --write ."
